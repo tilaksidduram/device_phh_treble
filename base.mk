@@ -25,11 +25,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 	ro.build.version.release=$(PLATFORM_VERSION) \
 	ro.build.version.security_patch=$(PLATFORM_SECURITY_PATCH) \
 	ro.adb.secure=0 
-	
+
 #Huawei HiSuite (also other OEM custom programs I guess) it's of no use in AOSP builds
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 	persist.sys.usb.config=adb
-	
 
 #VNDK config files
 PRODUCT_COPY_FILES += \
@@ -91,4 +90,5 @@ PRODUCT_COPY_FILES += \
 	device/phh/treble/files/samsung-gpio_keys.kl:system/phh/samsung-gpio_keys.kl \
 	device/phh/treble/files/samsung-sec_touchscreen.kl:system/phh/samsung-sec_touchscreen.kl \
 	device/phh/treble/files/oneplus6-synaptics_s3320.kl:system/phh/oneplus6-synaptics_s3320.kl \
-
+        device/phh/treble/files/cheeseburger-synaptics.kl:system/phh/cheeseburger-synaptics.kl \
+        device/phh/treble/files/cheeseburger-fpc1020.kl:system/phh/cheeseburger-fpc1020.kl \

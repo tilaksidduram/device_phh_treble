@@ -66,6 +66,14 @@ changeKeylayout() {
         changed=true
     fi
 
+    if [ "$(getprop ro.vendor.product.device)" == "cheeseburger" ];then
+        cp /system/phh/cheeseburger-synaptics.kl /mnt/phh/keylayout/synaptics.kl
+        cp /system/phh/cheeseburger-fpc1020.kl /mnt/phh/keylayout/fpc1020.kl
+        chmod 0644 /mnt/phh/keylayout/synaptics.kl
+        chmod 0644 /mnt/phh/keylayout/fpc1020.kl
+        changed=true
+    fi
+
     if [ "$changed" == true ];then
         mount -o bind /mnt/phh/keylayout /system/usr/keylayout
         restorecon -R /system/usr/keylayout
