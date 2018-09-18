@@ -92,3 +92,5 @@ PRODUCT_COPY_FILES += \
 	device/phh/treble/files/oneplus6-synaptics_s3320.kl:system/phh/oneplus6-synaptics_s3320.kl \
         device/phh/treble/files/cheeseburger-synaptics.kl:system/phh/cheeseburger-synaptics.kl \
         device/phh/treble/files/cheeseburger-fpc1020.kl:system/phh/cheeseburger-fpc1020.kl \
+
+SELINUX_IGNORE_NEVERALLOWS := true
