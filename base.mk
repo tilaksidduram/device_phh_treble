@@ -95,3 +95,10 @@ PRODUCT_COPY_FILES += \
         device/phh/treble/files/cheeseburger-fpc1020.kl:system/phh/cheeseburger-fpc1020.kl \
 
 SELINUX_IGNORE_NEVERALLOWS := true
+
+$(call inherit-product, vendor/havoc/config/phone-xxhdpi-4096-dalvik-heap.mk)
+$(call inherit-product, vendor/havoc/config/phone-xxhdpi-2048-hwui-memory.mk)
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_WIDTH := 1080
